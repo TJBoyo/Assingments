@@ -18,9 +18,9 @@ print(float)
 req_list = list()
 while True:
     Num = input('Enter input: ')
-    req_list.append(Num)
     if Num == 'done' :
         break
+    req_list.append(Num)
 print(req_list)
 
 #Using range(1,101), make a list containing only prime numbers.
@@ -48,14 +48,11 @@ print(prime_Num)
 #Fourth iteration : Compare every element after fourth element with fourth element and if it is larger then swap. In fourth iteration, 45 is larger than 15. So, swap it.
 #1	2	3	15	45
 
-ini_list = [2, 3, 1, 45, 15]
-#first iteration
-a = list()
-value = 0
-for i in ini_list:
-    value = i
-    if value > i:
-        print(i)
 
-
+a = [2,3,1,45,15]
+for i in range(0,len(a)):
+  for j in range(i+1,len(a)):
+    if a[i]>a[j]:
+      a[i],a[j] = a[j],a[i]
+print(a)
 
